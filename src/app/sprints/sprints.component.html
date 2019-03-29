@@ -1,0 +1,21 @@
+<h1>Sprint List</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Id</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">Finish Date</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let iteration of iterations">
+    <td>{{iteration.name}}</td>
+    <td>{{iteration.id}}</td>
+     <td>{{iteration.attributes.startDate}}</td>
+     <td>{{iteration.attributes.finishDate}}</td>
+     <td> <button class="btn btn-light" (click)="onSaveId(iteration.id)">See WorkItems</button></td>
+    </tr>
+  </tbody>
+  </table>
